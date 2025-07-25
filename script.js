@@ -35,7 +35,7 @@ function displayBook(book) {
     const card = document.createElement("div");
     card.className = "card";
     card.dataset.id = book.id;
-
+    let isRead = false;
     card.innerHTML = `
         <div class="content">
             <div class="para">
@@ -48,7 +48,13 @@ function displayBook(book) {
             </div>
         </div>
     `;
-
+    const readBtn = card.querySelector(".read-btn");
+    readBtn.addEventListener("click", () => {
+        isRead = !isRead;
+        readBtn.textContent = isRead ? "Read" : "Not Read";
+        readBtn.classList.toggle("read");
+        readBtn.classList.toggle("not-read");
+    });
     // Remove card logic
     card.querySelector(".remove-btn").addEventListener("click", () => {
         card.remove();
@@ -59,4 +65,4 @@ function displayBook(book) {
 }
 
 // Optional: Preload one book
-// addBook("Crime and Punishment", "Fyodor Dostoevsky");
+addBook("Crime and Punishment", "Fyodor Dostoevsky");
