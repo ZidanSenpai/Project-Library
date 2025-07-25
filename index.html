@@ -6,15 +6,40 @@
     <title>Library</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Galindo&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="card">
-        <div class="content">
-            <p class="para">
-            <h1>Crime and Punishment</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
-            at voluptas minus culpa deserunt delectus sapiente inventore pariatur
-            </p>
+    <div class="header">
+        <h1>Library</h1>
+    </div>
+    <div id="container" class="container">
+        <div class="add">
+            <button class="learn-more" id="add-button">
+                Add Book
+            </button>
+            <form id="book-form" style="display: none;">
+                <label>Book Name: <input type="text" id="book-name" required></label><br>
+                <label>Author: <input type="text" id="book-author" required></label><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="card">
+            <div class="content">
+                <p class="para">
+                <h1>Crime and Punishment</h1>
+                Fyodor Dostoevsky
+                </p>
+                <div class="buttons">
+                    <button class="learn-more" id="read">
+                        Read
+                    </button>
+                    <button class="learn-more" id="remove">
+                        Remove
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
